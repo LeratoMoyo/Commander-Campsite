@@ -10,18 +10,17 @@ class SplashActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         setContentView(R.layout.activity_splash)
-        val btnStart = findViewBy<Button>(R.id.btnStart)
+        val btnStart = findViewById<Button>(R.id.btnStart)
         val btnExit = findViewById<Button>(R.id.btnExit)
         btnStart.setOnClickListener {
             val intent = Intent (this, MainActivity::class.java)
-            StartActivity(intent)
-        }
-        btnExit.setOnClickListener {
-            val intent=Intent(this, MainActivity::class.java)
             startActivity(intent)
+            finish()
         }
+
         btnExit.setOnClickListener {
             finishAffinity()
         }
         }
     }
+<?xml version="1.0" encoding = "utf - 8"?>
