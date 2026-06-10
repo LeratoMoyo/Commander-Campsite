@@ -15,7 +15,7 @@ class MainActivity: AppCompatActivity(){
     val category = arrayOf""( Shelter, Food, Safety)
     val quantity = arrayOf(3,7,4)
 
-    val comments = arrayOf(One bag per person, For eating,To start a fire)
+    val comments = arrayOf(One bag per person, Baked beans,To start a fire)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
