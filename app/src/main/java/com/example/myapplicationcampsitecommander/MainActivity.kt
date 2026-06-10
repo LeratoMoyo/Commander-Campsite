@@ -1,7 +1,7 @@
 package com.example.myapplicationcampsitecommander
 
 import android.content.Intent
-import androidx.activity.enableEdgeToEdge
+import androidx.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
