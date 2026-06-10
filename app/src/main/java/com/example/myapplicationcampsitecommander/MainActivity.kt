@@ -3,6 +3,7 @@ package com.example.myapplicationcampsitecommander
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import java.util.Locale
 
@@ -53,6 +54,13 @@ class MainActivity: AppCompatActivity(){
 
             txtResults.text =
                 "Total quantity:$totalMax\n" +
+        }
+        if(input.text.toString().isEmpty()){
+            Toast.makeText(
+                this,
+                "Incorrect entry. Try again"
+                Toast.LENGTH_SHORT
+            ). show()
         }
     }
 }
