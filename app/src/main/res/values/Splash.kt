@@ -21,3 +21,20 @@ class SplashActivity : AppCompatActivity() {
                 Intent(this, MainActivity::class.java)
 
             startActivity(intent)
+//Close splash screen
+            finish()
+        }, 3000)
+    }
+    <activity
+    android:name="SplashActivity">
+
+    <intent-filter>
+
+    <action
+    android:name="android.intent,action.MAIN"/>
+
+    <category
+    android:name="android.intent.category.LAUNCHER"
+    </intent-filter>
+    </activity>
+}

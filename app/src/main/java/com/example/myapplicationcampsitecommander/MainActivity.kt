@@ -7,13 +7,12 @@ import androidx.appcompat.app.AppCompatActivity
 import java.util.Locale
 
 class MainActivity: AppCompatActivity(){
-
     val Itemname = arrayOf(
         "Sleeping Bag",
         "Tinned Food",
         "Matchstick box",
     )
-    val category = arrayOf( Shelter, Food, Safety)
+    val category = arrayOf""( Shelter, Food, Safety)
     val quantity = arrayOf(3,7,4)
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,12 +30,12 @@ class MainActivity: AppCompatActivity(){
             findViewById<Button>(R.id.btnCalculate)
 
         //Dispalay table
-        var table = "ITEMNAME\CATEGORY\QUANTITY\n\n"
+        var table = "ITEMNAME\tCATEGORY\tQUANTITY\n\n"
 
         for(i in Itemname.indices) {
 
             table +=
-                "${Itemname[i]}\t${Locale.category[i]}\t${quantity[i]}\n"
+                "${Itemname[i]}\t${category[i]}\t${quantity[i]}\n"
         }
         txtTable.text=table
 
@@ -47,7 +46,7 @@ class MainActivity: AppCompatActivity(){
             for (quantity) {
                 totalMax += quantity
             }
-            val average =
+            val totalCap=
                 totalMax / quantity.size
 
             txtResults.text =
@@ -55,5 +54,5 @@ class MainActivity: AppCompatActivity(){
         }
     }
 }
-}
+
 
