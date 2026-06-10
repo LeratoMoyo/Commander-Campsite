@@ -3,6 +3,10 @@ package com.example.myapplicationcampsitecommander
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.EditText
+import android.widget.TextView
+import androidx.lifecycle.lifecycleScope
+import kotlinx.coroutines.delay
 import androidx.appcompat.app.AppCompatActivity
 
 class SplashActivity : AppCompatActivity() {
@@ -10,17 +14,7 @@ class SplashActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         setContentView(R.layout.activity_splash)
-        val btnStart = findViewById<Button>(R.id.btnStart)
-        val btnExit = findViewById<Button>(R.id.btnExit)
-        btnStart.setOnClickListener {
-            val intent = Intent (this, MainActivity::class.java)
-            startActivity(intent)
-            finish()
-        }
 
-        btnExit.setOnClickListener {
-            finishAffinity()
-        }
-        }
     }
-<?xml version="1.0" encoding = "utf - 8"?>
+}
+
