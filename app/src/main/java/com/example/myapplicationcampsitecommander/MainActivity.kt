@@ -15,6 +15,8 @@ class MainActivity: AppCompatActivity(){
     val category = arrayOf""( Shelter, Food, Safety)
     val quantity = arrayOf(3,7,4)
 
+    val comments = arrayOf(One per person, For eating,To start a fire)
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -30,12 +32,12 @@ class MainActivity: AppCompatActivity(){
             findViewById<Button>(R.id.btnCalculate)
 
         //Dispalay table
-        var table = "ITEMNAME\tCATEGORY\tQUANTITY\n\n"
+        var table = "ITEMNAME\tCATEGORY\tQUANTITY\tComments\n\n"
 
         for(i in Itemname.indices) {
 
             table +=
-                "${Itemname[i]}\t${category[i]}\t${quantity[i]}\n"
+                "${Itemname[i]}\t${category[i]}\t${quantity[i]}\t${comments[i]}\n"
         }
         txtTable.text=table
 
